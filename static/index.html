@@ -8,8 +8,8 @@
 <body>
 <div id="inputs">
 <textarea id="code">
-* play with antlr4
-* write a tutorial
+* pay acme corp 123
+* pay Jonny 456
 </textarea>
 <br/>
 <button id="parse">Parse</button>
@@ -56,7 +56,7 @@ document.getElementById("parse").addEventListener("click", function(){
     var tokens = new antlr4.CommonTokenStream(expenseLexer);
     var expenseParser = new ExpenseParser.expenseParser(tokens);
     expenseParser.buildParseTrees = true;
-    var expenseTree = expenseParser.elements();
+    var expenseTree = expenseParser.payments();
     console.log("Parsed: " + expenseTree);
 });
 
