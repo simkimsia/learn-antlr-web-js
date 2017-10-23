@@ -53,7 +53,7 @@ document.getElementById("parse").addEventListener("click", function(){
 
     
     var expenseLexer = new ExpenseLexer.expenseLexer(chars);
-    var tokens = new new antlr4.CommonTokenStream(expenseLexer);
+    var tokens = new antlr4.CommonTokenStream(expenseLexer);
     var expenseParser = new ExpenseParser.expenseParser(tokens);
     expenseParser.buildParseTrees = true;
     var expenseTree = expenseParser.elements();
